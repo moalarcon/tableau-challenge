@@ -1,0 +1,615 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0219.0753                               -->
+<workbook original-version='18.1' source-build='2020.1.0 (20201.20.0219.0753)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='CitiBike_FULL_14_16_18' inline='true' name='federated.0expaqp0jsyfuk12gnmb0145mnau' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CitiBike_FULL_14_16_18' name='textscan.1f6nadv0goyzn4158pjac1hc71w5'>
+            <connection class='textscan' directory='/Users/monicamalarcon/Dropbox/School/UM_Bootcamp/Work_Bootcamp/20 - Tableau (in class)/20-HW Tableau/Citi_bike' filename='CitiBike_FULL_14_16_18.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1f6nadv0goyzn4158pjac1hc71w5' name='CitiBike_FULL_14_16_18.csv' table='[CitiBike_FULL_14_16_18#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='tripduration' ordinal='0' />
+            <column datatype='datetime' name='start' ordinal='1' />
+            <column datatype='datetime' name='stop' ordinal='2' />
+            <column datatype='real' name='start station id' ordinal='3' />
+            <column datatype='string' name='start station name' ordinal='4' />
+            <column datatype='real' name='start station latitude' ordinal='5' />
+            <column datatype='real' name='start station longitude' ordinal='6' />
+            <column datatype='real' name='end station id' ordinal='7' />
+            <column datatype='string' name='end station name' ordinal='8' />
+            <column datatype='real' name='end station latitude' ordinal='9' />
+            <column datatype='real' name='end station longitude' ordinal='10' />
+            <column datatype='string' name='bikeid' ordinal='11' />
+            <column datatype='string' name='usertype' ordinal='12' />
+            <column datatype='real' name='birth year' ordinal='13' />
+            <column datatype='real' name='age' ordinal='14' />
+            <column datatype='integer' name='gender' ordinal='15' />
+            <column datatype='date' name='startdate' ordinal='16' />
+            <column datatype='datetime' name='starttime' ordinal='17' />
+            <column datatype='date' name='stopdate' ordinal='18' />
+            <column datatype='datetime' name='stoptime' ordinal='19' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[start]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>start</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stop</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stop]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>stop</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>startdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[startdate]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>startdate</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[stopdate]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>stopdate</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[CitiBike_FULL_14_16_18.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Age Groups (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Age Today (group)]' new-bin='true'>
+          <bin default-name='false' value='&quot;Mature&quot;'>
+            <value>&quot;65 - 69&quot;</value>
+            <value>&quot;70 - 74&quot;</value>
+            <value>&quot;75 - 79&quot;</value>
+            <value>&quot;80 - 84&quot;</value>
+            <value>&quot;85 - 89&quot;</value>
+            <value>&quot;90 - 94&quot;</value>
+            <value>&quot;96 - 99&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Professionals&quot;'>
+            <value>&quot;30 - 34&quot;</value>
+            <value>&quot;35 - 39&quot;</value>
+            <value>&quot;40 - 44&quot;</value>
+            <value>&quot;45 - 49&quot;</value>
+            <value>&quot;50 - 54&quot;</value>
+            <value>&quot;55 - 59&quot;</value>
+            <value>&quot;60 - 64&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Young Adults&quot;'>
+            <value>&quot;18 - 24&quot;</value>
+            <value>&quot;25 - 29&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Age Groups' datatype='string' name='[Age Today (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[age]' new-bin='true'>
+          <bin default-name='false' value='&quot;100 +&quot;'>
+            <value>100.0</value>
+            <value>101.0</value>
+            <value>102.0</value>
+            <value>103.0</value>
+            <value>104.0</value>
+            <value>105.0</value>
+            <value>107.0</value>
+            <value>108.0</value>
+            <value>109.0</value>
+            <value>110.0</value>
+            <value>111.0</value>
+            <value>113.0</value>
+            <value>119.0</value>
+            <value>120.0</value>
+            <value>121.0</value>
+            <value>123.0</value>
+            <value>124.0</value>
+            <value>125.0</value>
+            <value>126.0</value>
+            <value>127.0</value>
+            <value>130.0</value>
+            <value>131.0</value>
+            <value>132.0</value>
+            <value>133.0</value>
+            <value>134.0</value>
+            <value>135.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;18 - 24&quot;'>
+            <value>18.0</value>
+            <value>19.0</value>
+            <value>20.0</value>
+            <value>21.0</value>
+            <value>22.0</value>
+            <value>23.0</value>
+            <value>24.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;25 - 29&quot;'>
+            <value>25.0</value>
+            <value>26.0</value>
+            <value>27.0</value>
+            <value>28.0</value>
+            <value>29.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;30 - 34&quot;'>
+            <value>30.0</value>
+            <value>31.0</value>
+            <value>32.0</value>
+            <value>33.0</value>
+            <value>34.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;35 - 39&quot;'>
+            <value>35.0</value>
+            <value>36.0</value>
+            <value>37.0</value>
+            <value>38.0</value>
+            <value>39.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;40 - 44&quot;'>
+            <value>40.0</value>
+            <value>41.0</value>
+            <value>42.0</value>
+            <value>43.0</value>
+            <value>44.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;45 - 49&quot;'>
+            <value>45.0</value>
+            <value>46.0</value>
+            <value>47.0</value>
+            <value>48.0</value>
+            <value>49.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;50 - 54&quot;'>
+            <value>50.0</value>
+            <value>51.0</value>
+            <value>52.0</value>
+            <value>53.0</value>
+            <value>54.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;55 - 59&quot;'>
+            <value>55.0</value>
+            <value>56.0</value>
+            <value>57.0</value>
+            <value>58.0</value>
+            <value>59.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;60 - 64&quot;'>
+            <value>60.0</value>
+            <value>61.0</value>
+            <value>62.0</value>
+            <value>63.0</value>
+            <value>64.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;65 - 69&quot;'>
+            <value>65.0</value>
+            <value>66.0</value>
+            <value>67.0</value>
+            <value>68.0</value>
+            <value>69.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;70 - 74&quot;'>
+            <value>70.0</value>
+            <value>71.0</value>
+            <value>72.0</value>
+            <value>73.0</value>
+            <value>74.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;75 - 79&quot;'>
+            <value>75.0</value>
+            <value>76.0</value>
+            <value>77.0</value>
+            <value>78.0</value>
+            <value>79.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;80 - 84&quot;'>
+            <value>80.0</value>
+            <value>81.0</value>
+            <value>82.0</value>
+            <value>83.0</value>
+            <value>84.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;85 - 89&quot;'>
+            <value>85.0</value>
+            <value>86.0</value>
+            <value>87.0</value>
+            <value>88.0</value>
+            <value>89.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;90 - 94&quot;'>
+            <value>90.0</value>
+            <value>91.0</value>
+            <value>92.0</value>
+            <value>93.0</value>
+            <value>94.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;96 - 99&quot;'>
+            <value>96.0</value>
+            <value>97.0</value>
+            <value>98.0</value>
+            <value>99.0</value>
+          </bin>
+          <bin default-name='false' value='&quot;Unknown&quot;'>
+            <value>0.0</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Trip Duration (minutes)' datatype='real' name='[Calculation_4087790749497184256]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[tripduration]/60' />
+      </column>
+      <column caption='Gender Type' datatype='string' name='[Calculation_4087790749499858947]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [gender] = 0 THEN &quot;Uknown&quot; &#10;ELSEIF [gender] = 1 THEN &quot;Male&quot;&#10;ELSE &quot;Female&quot;&#10;END' />
+      </column>
+      <column caption='Calculation1' datatype='date' name='[Calculation_4087790749502623748]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[startdate]' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Age Today' datatype='real' name='[age]' role='measure' type='quantitative' />
+      <column caption='Bikeid' datatype='string' default-role='measure' default-type='quantitative' name='[bikeid]' role='dimension' type='nominal' />
+      <column caption='Birth Year' datatype='real' name='[birth year]' role='dimension' type='quantitative' />
+      <column caption='End Station Id' datatype='real' name='[end station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+      <column caption='Start Station Id' datatype='real' name='[start station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column caption='Start' datatype='datetime' name='[start]' role='dimension' type='ordinal' />
+      <column caption='Startdate' datatype='date' name='[startdate]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='Stop' datatype='datetime' name='[stop]' role='dimension' type='ordinal' />
+      <column caption='Stopdate' datatype='date' name='[stopdate]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.535959' measure-ordering='alphabetic' measure-percentage='0.464041' show-hidden-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='tripduration' />
+        <field-sort-custom-order field='Calculation_4087790749497184256' />
+        <field-sort-custom-order field='start' />
+        <field-sort-custom-order field='stop' />
+        <field-sort-custom-order field='start station id' />
+        <field-sort-custom-order field='start station name' />
+        <field-sort-custom-order field='start station latitude' />
+        <field-sort-custom-order field='start station longitude' />
+        <field-sort-custom-order field='end station id' />
+        <field-sort-custom-order field='end station name' />
+        <field-sort-custom-order field='end station latitude' />
+        <field-sort-custom-order field='end station longitude' />
+        <field-sort-custom-order field='bikeid' />
+        <field-sort-custom-order field='usertype' />
+        <field-sort-custom-order field='birth year' />
+        <field-sort-custom-order field='age' />
+        <field-sort-custom-order field='gender' />
+        <field-sort-custom-order field='Calculation_4087790749499858947' />
+        <field-sort-custom-order field='startdate' />
+        <field-sort-custom-order field='Calculation_4087790749502623748' />
+        <field-sort-custom-order field='starttime' />
+        <field-sort-custom-order field='stopdate' />
+        <field-sort-custom-order field='stoptime' />
+        <field-sort-custom-order field='Age Today (group)' />
+        <field-sort-custom-order field='Age Groups (group)' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{18F95099-9607-43C0-B4B9-6894789D24FA}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{75518683-CDE1-47F6-86BB-66895160FAE9}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
